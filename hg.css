@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+}
+div {
+    
+   
+    transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 2s;
+}
+
+body {
+ 
+  font-family: Helvetica, sans-serif;
+background: url(http://1.bp.blogspot.com/_EAViqbzwc_s/TOZ1a38SSsI/AAAAAAAACUs/10BA5z6nosI/s1600/Leaning+Tower%252C+Pisa%252C+Italy+-+1600x1200+-+ID+20080+-+PREMIUM.jpg) no-repeat center center fixed; 
+	
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	padding-top: 0px;
+		padding-bottom: 0px;
+		margin-left: 0;
+		margin-top: 0;
+	
+}
+body img{
+ background-blend-mode:darken;
+}
+.link
+{
+	text-decoration: none;
+}
+a 
+{
+	text-decoration: none;
+	color: aliceblue;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+a:hover{
+	color: lightslategray;
+}
+#meni
+	{
+		position: fixed;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+		width: 100%;
+		height: 80px;
+		text-decoration-color: aliceblue;
+		float: none;
+		padding-top: 0px;
+		padding-bottom: 20px;
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+		z-index: 1;
+	}
+/* Vertikalna linija timeline-a */
+.vLinija {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+}
+
+.vlinija:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: aqua;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+	
+}
+
+/* Okvir sadržaja*/
+.okvir {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+	z-index: 0;
+}
+.sadrzaj:hover{
+	    animation: okvir 3s ;
+    animation-fill-mode: forwards;
+	transform: scale(1.05);
+}
+@keyframes okvir {
+	
+    from {background-color: white;}
+    to {background-color: brown;}
+	
+}
+
+
+
+.okvir:after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+	
+}
+
+.lijevo {
+  left: 0;
+}
+
+.desno {
+  left: 50%;
+}
+
+.lijevo::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.desno::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+
+.desno::after {
+  left: -16px;
+}
+
+
+.sadrzaj {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  
+
+	
+}
+
+@media screen and (max-width: 600px) {
+
+  .vlinija::after {
+    left: 31px;
+  }
+
+
+  .okvir {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+
+  .okvir::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+
+  .lijevo::after, .desno::after {
+    left: 15px;
+  }
+
+
+  .desno {
+    left: 0%;
+  }
+}
