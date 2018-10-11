@@ -4,7 +4,7 @@
 
 body
 {
-	font-family: Helvetica, sans-serif;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
 
 	
   -webkit-background-size: cover;
@@ -20,23 +20,34 @@ body
 	min-height: 100% !important;
     height: 100%;
 	background-blend-mode:darken;
-	animation: pozdina 5s;
+	
 }
-
-@-webkit-keyframes myfirst {
-    from {opacity: 0.2;}
-    to {opacity: 1;}
-  }
-
-  /* Standard syntax */
-  @keyframes myfirst {
-    from {opacity: 0.2;}
-    to {opacity: 1;}
-  }
+.blur
+{
+filter: blur(5px);
+  -webkit-filter: blur(5px);
+	opacity: 2;
+	background-blend-mode: darken;
+}
 
 .link
 {
 	text-decoration: none;
+}
+img
+{
+	background-blend-mode: darken;
+}
+#omotac
+{
+	padding-top: 0px;
+		padding-bottom: 0px;
+		margin-left: 0px;
+		margin-top: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	min-height: 100% !important;
+    height: 100%;
 }
 a 
 {
@@ -97,7 +108,7 @@ a:hover{
 }
 @keyframes okvir {
 	
-    from {background-color: white;}
+    from {background-color: lightslategray;}
     to {background-color: brown;}
 	
 }
@@ -120,6 +131,7 @@ a:hover{
 
 .lijevo {
   left: 0;
+	margin-left: 0;
 }
 
 .desno {

@@ -1,6 +1,8 @@
 // JavaScript Document
 $(document).ready(function(){
-
+$(".okvir").hover(function(){
+$('#pozadina').toggleClass('blur');
+});
 
 $('body').css('display', 'none');
 $('body').fadeIn(1500);
