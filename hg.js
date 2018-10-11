@@ -14,17 +14,14 @@ $('body').fadeIn(1500);
 
 	var i = 1;
 setInterval(function() {
-    
-    
-	$('#pozadina').fadeOut();
-	$('#pozadina').animate
-	//$('#pozadina').delay(600);
-	$("#pozadina").attr("src",  images[i] ).fadeIn();
-	
-      i = i + 1;
+   $('#pozadina').fadeOut(500, function(){
+      $(this).attr('src',images[i]).bind('onreadystatechange load', function(){
+         if (this.complete) $(this).fadeIn(500);
+      });
+   });
+ i = i + 1;
       if (i === images.length) {
         i =  0;
       }
-
-	//$('#pozadina').fadeIn();
-}, 3500);
+	
+}, 5000);
