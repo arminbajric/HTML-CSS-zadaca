@@ -14,10 +14,17 @@ $('body').fadeIn(1500);
 
 	var i = 1;
 setInterval(function() {
-      
-	$('body').css('background-image', 'url(' + images[i] + ')');
+    
+    
+	$('#pozadina').fadeOut();
+	$('#pozadina').animate
+	//$('#pozadina').delay(600);
+	$("#pozadina").attr("src",  images[i] ).fadeIn();
+	
       i = i + 1;
       if (i === images.length) {
         i =  0;
       }
+
+	//$('#pozadina').fadeIn();
 }, 3500);

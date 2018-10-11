@@ -1,20 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
-* {
-  box-sizing: border-box;
-}
-div {
-    
-   
-    transition-property: width;
-    transition-duration: 5s;
-    transition-delay: 2s;
-}
 
-body {
- 
-  font-family: Helvetica, sans-serif;
-background: url(http://1.bp.blogspot.com/_EAViqbzwc_s/TOZ1a38SSsI/AAAAAAAACUs/10BA5z6nosI/s1600/Leaning+Tower%252C+Pisa%252C+Italy+-+1600x1200+-+ID+20080+-+PREMIUM.jpg) no-repeat center center fixed; 
+
+body
+{
+	font-family: Helvetica, sans-serif;
+
 	
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -22,13 +13,27 @@ background: url(http://1.bp.blogspot.com/_EAViqbzwc_s/TOZ1a38SSsI/AAAAAAAACUs/10
   background-size: cover;
 	padding-top: 0px;
 		padding-bottom: 0px;
-		margin-left: 0;
-		margin-top: 0;
-	
+		margin-left: 0px;
+		margin-top: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	min-height: 100% !important;
+    height: 100%;
+	background-blend-mode:darken;
+	animation: pozdina 5s;
 }
-body img{
- background-blend-mode:darken;
-}
+
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }
+
+  /* Standard syntax */
+  @keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }
+
 .link
 {
 	text-decoration: none;
